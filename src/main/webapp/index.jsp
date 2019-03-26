@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>HEY MAN! IPL STARTED</title>
+    <title>Demo Website for Secure Coding</title>
 
 
     <!-- Custom styles for this template -->
