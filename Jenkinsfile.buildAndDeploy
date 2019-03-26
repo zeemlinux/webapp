@@ -19,11 +19,17 @@ pipeline {
             }
         }
         
+        stage ('Start Web Server')
+        {
+            steps {
+                sh 'bash /home/appsec/prod/apache-tomcat-8.5.39/bin/startup.sh'
+            }
+        }
+        
         stage ('Deploy-To-Tomcat') {
             steps {
-           sshagent(['tomcat']) {
-                sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@54.86.226.84:/home/ubuntu/prod/apache-tomcat-8.5.39/webapps/webapp.war'
-              }      
+                sh 'cp /var/lib/jenkins/workspace/webapp-build-deploy-pipeline/target/WebApp.war /home/appsec/prod/apache-tomcat-8.5.39/webapps/webapp.war'
+                
            }
         }
     }
