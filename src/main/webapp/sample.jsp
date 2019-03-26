@@ -1,3 +1,4 @@
+<?page language="java"?>
 <html>
 	<head>
 		<title>Results</title>
