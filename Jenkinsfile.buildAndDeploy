@@ -19,12 +19,7 @@ pipeline {
             }
         }
         
-        stage ('Start Web Server')
-        {
-            steps {
-                sh 'bash /home/appsec/prod/apache-tomcat-8.5.39/bin/startup.sh'
-            }
-        }
+
         
         stage ('Deploy-To-Tomcat') {
             steps {
