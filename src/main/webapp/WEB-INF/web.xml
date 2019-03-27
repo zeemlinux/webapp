@@ -6,7 +6,3 @@
   <display-name>Archetype Created Web Application</display-name>
 </web-app>
 
-<context-param>
-	<param-name>defaultHtmlEscape</param-name>
-	<param-value>true</param-value>
-</context-param>
