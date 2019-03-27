@@ -9,6 +9,8 @@
 		<h1> Welcome to XSS Demo </h1>
 		<br>
 		<h2> Welcome <h2> <%=request.getParameter("name")%>
-		<h2> Secured With XSS </h2> <c:out value="${param.value}">
+		<% String abc = request.getParameter("value") %>
+		<h3>${abc)</h3>
+		
 	</body>
 </html>
