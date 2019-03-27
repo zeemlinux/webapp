@@ -7,7 +7,14 @@
 	<body bgcolor="yellow">
 		<h1>Hello ${param.name}</h1>
 		<%
-			out.print("<h1>"+ str(request.getHeaderNames()) +"</h1>")
+			Enumeration hearderNames = request.getHeaderNames();
+			while(headerNames.hasMoreElements()) {
+				String paramName = (String)headerNames.nextElement();
+				out.print("<h1>" + paramName + "</h1>\n");
+				String paramValue = request.getHeader(paramName);
+				out.println("<h2><u>" + paramValue + "</u></h2>\n" );
+			}
+		
 		%>
 	</body>
 </html>
