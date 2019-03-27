@@ -10,7 +10,7 @@
 		<br>
 		<h2> Welcome <h2> <%=request.getParameter("name")%>
 		<% String abc = request.getParameter("value"); %>
-		<h3>${abc)</h3>
+		<h3>${abc}</h3>
 		
 	</body>
 </html>
